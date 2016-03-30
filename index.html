@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chenxi Zhong's Resume</title>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="lib/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <h1>Chenxi Zhong</h1>
+        <h3>1400 S Joyce Street, Arlington, VA 22202</h3>
+        <h3>Phone: (202)-550-3696</h3>
+        <h3>Email: zhongchenxi@gwmail.gwu.edu</h3>
+
+    <h2>EDUCATION</h2>
+        <p>2014-Present, Washington, D.C.</p>
+        <p>The George Washington University</p>
+        <p>Master of Science in Electrical Engineering</p>
+        <p>Concentration in VLSI</p>
+        <p>2008-2012, Changsha, China</p>
+        <p>Changsha University of Science and Technology</p>
+        <p>Bachelor of Science in Electrical Engineering</p>
+        <p>Concentration in Power</p>
+
+    <div class="project" ng-controller="ProjectController">
+        <h2><button ng-click="count += 1" ng-init="count = 0">PROJECTS</button></h2>
+            <!--<p>{{count}}</p>-->
+            <!--<h3>FPGA Development</h3>-->
+                <!--<ul>-->
+                    <!--<li>Media Player System: Independently designed a media player system that employs a dual-core processor and allows image processing and music display be separately controlled. This system also has a sleep mode. (Quartus 2, Verilog, C/C++)</li>-->
+                    <!--<li>Object Tracking: Developed a device that could capture and track the movement of objects whose color has significant difference to the background, and the movement of the object would be marked on a LCD screen on the device. </li>-->
+                <!--</ul>-->
+
+            <!--<h3>Embedded System Development</h3>-->
+                <!--<ul>-->
+                    <!--<li>Developed a music player that employs UART protocol, and it allows users to create their own music or play songs by using keyboard. (C/C++)</li>-->
+                <!--</ul>-->
+
+            <!--<h3>Supercomputer Development</h3>-->
+                <!--<ul>-->
+                    <!--<li>Developed a program that can be used to calculate histograms of pictures on Pyramid by using MPI and UPC. (C/C++)</li>-->
+                <!--</ul>-->
+
+            <!--<h3>Java Development</h3>-->
+                <!--<ul>-->
+                    <!--<li>Designed a BeatBox program which allows users to play all kinds of instruments and create their own work of music. This program also allows users to save their work on the client-side, and allows them to share their work with others through the serve-end. (Java)</li>-->
+                <!--</ul>-->
+
+            <div ng-repeat="project in projects" ng-show="count%2===1">
+                <h3>{{project.name}}</h3>
+                    <ul>
+                        <div ng-show="isProjectFPGA({{project}})">
+                            <li>{{project.subname1}}{{project.description1}}</li>
+                            <li>{{project.subname2}}{{project.description2}}</li>
+                        </div>
+
+                        <div ng-hide="isprojectFPGA({{project}})">
+                            <li>{{project.description}}</li>
+                        </div>
+
+                    </ul>
+            </div>
+    </div>
+
+
+    <h2>WORK EXPERIENCES</h2>
+        <h3>Hunan Hydro & Power Design Institute</h3>
+            <p>01/2012-09/2012</p>
+            <p>Changsha, China</p>
+            <p>Intern-Associate Engineer</p>
+            <ul>
+                <li>Finished 10% of a wiring diagram for a substation design project</li>
+                <li>Drew substation secondary wired diagram </li>
+                <li>Sorted to diagram to understand the classifications of diagram </li>
+            </ul>
+
+        <h3>Xiangjiang Power Construction Co., Ltd</h3>
+            <p>05/2013-07/2014</p>
+            <p>Changsha, China</p>
+            <p>Intern-Associate Engineer</p>
+            <ul>
+                <li>Partly interpreted physical, elevation plan, conduit plans, bill of material and cable schedule for substations.</li>
+            </ul>
+
+    <h2>TECHNICAL AND LANGUAGE SKILLS</h2>
+        <h3>Programming</h3>
+            <ul>
+                <li>C/C++</li>
+                <li>Verilog</li>
+                <li>Java</li>
+                <li>Javascript</li>
+                <li>HTML/CSS</li>
+                <li>Python</li>
+            </ul>
+
+        <h3>Language</h3>
+            <ul>
+                <li>English</li>
+                <li>Chinese</li>
+            </ul>
+
+        <h3>Application</h3>
+            <ul>
+                <li>CAD</li>
+                <li>Quarturs 2</li>
+                <li>Candence</li>
+                <li>Synopsys</li>
+                <li>Matlab</li>
+                <li>Office</li>
+            </ul>
+
+        <h3>Operating System</h3>
+            <ul>
+                <li>Windows</li>
+                <li>Linux</li>
+            </ul>
+
+    <h2>ADDITIONAL INFORMATION</h2>
+        <h3>Publications</h3>
+            <ul>
+                <li>Journal of Electric Power Science and Technology [J], 2011,26(3): 75-79 Analysis Of VSC-HVDC Control System</li>
+            </ul>
+
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/ProjectController.js"></script>
+</body>
+</html>
