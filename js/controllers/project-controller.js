@@ -2,6 +2,7 @@
  * Created by zhongchenxi on 3/29/16.
  */
 app.controller('ProjectController', ['$scope', function($scope){
+    var count = 0;
     $scope.projects = [
         {
             name: 'FPGA Development',
@@ -25,12 +26,25 @@ app.controller('ProjectController', ['$scope', function($scope){
     ];
 
     $scope.isProjectFPGA = function(proj){
-        if(proj.description.length === 0){
+        if(proj.description.toString().length === 0){
             return true;
         } else {
             return false;
         }
     };
 
+    $scope.counter = function(){
 
+        count += 1;
+
+        return count;
+    };
+
+    $scope.isClicked = function(count){
+        if(count%2 === 1){
+            return true;
+        } else {
+            return false;
+        }
+    };
 }]);

@@ -22,9 +22,10 @@
         <p>Bachelor of Science in Electrical Engineering</p>
         <p>Concentration in Power</p>
 
-    <div class="project" ng-controller="ProjectController">
-        <h2><button ng-click="count += 1" ng-init="count = 0">PROJECTS</button></h2>
-            <!--<p>{{count}}</p>-->
+    <div class="project">
+        <button class="projectsButton" ng-init="count=0" ng-click="count=count+1">PROJECTS</button>
+
+        <!--<p>{{count}}</p>-->
             <!--<h3>FPGA Development</h3>-->
                 <!--<ul>-->
                     <!--<li>Media Player System: Independently designed a media player system that employs a dual-core processor and allows image processing and music display be separately controlled. This system also has a sleep mode. (Quartus 2, Verilog, C/C++)</li>-->
@@ -46,24 +47,54 @@
                     <!--<li>Designed a BeatBox program which allows users to play all kinds of instruments and create their own work of music. This program also allows users to save their work on the client-side, and allows them to share their work with others through the serve-end. (Java)</li>-->
                 <!--</ul>-->
 
-            <div ng-repeat="project in projects" ng-show="count%2===1">
-                <h3>{{project.name}}</h3>
+            <!--<div ng-show="isClicked(counter())" ng-repeat="project in projects">-->
+                <!--<h3>{{project.name | uppercase}}</h3>-->
+                    <!--<ul>-->
+                        <!--<div ng-show="isProjectFPGA({{project}})">-->
+                            <!--<li>{{project.subname1}}{{project.description1}}</li>-->
+                            <!--<li>{{project.subname2}}{{project.description2}}</li>-->
+                        <!--</div>-->
+
+                        <!--<div ng-show="!isProjectFPGA({{project}})">-->
+                            <!--<li>{{project.description}}</li>-->
+                        <!--</div>-->
+
+                    <!--</ul>-->
+            <!--</div>-->
+
+            <div class="new-projects" ng-controller="ProjectController">
+                <section ng-show="count%2===1">
                     <ul>
-                        <div ng-show="isProjectFPGA({{project}})">
-                            <li>{{project.subname1}}{{project.description1}}</li>
-                            <li>{{project.subname2}}{{project.description2}}</li>
-                        </div>
-
-                        <div ng-hide="isprojectFPGA({{project}})">
-                            <li>{{project.description}}</li>
-                        </div>
-
+                        <li><a href ng-click="tab = 1">{{projects[0].name}}</a></li>
+                        <li><a href ng-click="tab = 2">{{projects[1].name}}</a></li>
+                        <li><a href ng-click="tab = 3">{{projects[2].name}}</a></li>
+                        <li><a href ng-click="tab = 4">{{projects[3].name}}</a></li>
                     </ul>
+
+                    <div class="panel" ng-show="tab === 1">
+                        <h4>{{projects[0].name}}</h4>
+                        <p>{{projects[0].subname1}}{{projects[0].description1}}</p>
+                        <p>{{projects[0].subname2}}{{projects[0].description2}}</p>
+                    </div>
+                    <div class="panel" ng-show="tab === 2">
+                        <h4>{{projects[1].name}}</h4>
+                        <p>{{projects[1].description}}</p>
+                    </div>
+                    <div class="panel" ng-show="tab === 3">
+                        <h4>{{projects[2].name}}</h4>
+                        <p>{{projects[2].description}}</p>
+                    </div>
+                    <div class="panel" ng-show="tab === 4">
+                        <h4>{{projects[3].name}}</h4>
+                        <p>{{projects[3].description}}</p>
+                    </div>
+                </section>
             </div>
     </div>
 
-
-    <h2>WORK EXPERIENCES</h2>
+    <div ng-controller="ExpController">
+    <button class="experiences" ng-click="counter">WORK EXPERIENCES</button>
+        <div ng-show="isClicked({{counter}})">
         <h3>Hunan Hydro & Power Design Institute</h3>
             <p>01/2012-09/2012</p>
             <p>Changsha, China</p>
@@ -81,6 +112,8 @@
             <ul>
                 <li>Partly interpreted physical, elevation plan, conduit plans, bill of material and cable schedule for substations.</li>
             </ul>
+        </div>
+    </div>
 
     <h2>TECHNICAL AND LANGUAGE SKILLS</h2>
         <h3>Programming</h3>
@@ -123,9 +156,9 @@
 
 
     <!-- Modules -->
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
     <!-- Controllers -->
-    <script src="js/controllers/ProjectController.js"></script>
+    <script type="text/javascript" src="js/controllers/project-controller.js"></script>
 </body>
 </html>
