@@ -1,0 +1,22 @@
+{
+  "id": "0",
+  "name": "Chenxi Zhong",
+  "children": [
+    {
+      "id": "1",
+      "name": "[Address](1400 South Joyce St, Arlington, VA 22202)"
+    },
+    {
+      "id": "2",
+      "name": "[Phone](202-550-3696)"
+    },
+    {
+      "id": "3",
+      "name": "[Email](zhongchenxi@gwmail.gwu.edu)"
+    },
+    {
+      "id": "4",
+      "name": "[Education]"
+    }
+  ]
+}

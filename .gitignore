@@ -1,7 +1,7 @@
-logs/*
-!.gitkeep
-node_modules/
+css/bootstrap.min.css
 bower_components/
-tmp
-.DS_Store
 .idea
+index.html
+index2.html
+js/app.js
+data
