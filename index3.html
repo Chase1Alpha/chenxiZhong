@@ -14,9 +14,14 @@
     <script src="js/my-resume.js"></script>
     <script src="js/routes.js"></script>
     <script src="js/controllers/project-controller.js"></script>
+    <script src="js/directives/climate-directive.js"></script>
     <title>Chenxi Zhong's Resume</title>
 </head>
 <body>
+    <div ng-controller="ClimateController">
+        <climate-directive></climate-directive>
+    </div>
+
     <div class="nav-list">
         <a href="#/information"> Information </a>
 

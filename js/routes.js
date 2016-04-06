@@ -28,5 +28,5 @@ angular.module('myResume')
                 templateUrl: 'templates/pages/addinfo.html'
             })
 
-            .otherwise({ redirectTo: '/information'});
+            .otherwise({ redirectTo: '/'});
     });
