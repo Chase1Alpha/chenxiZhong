@@ -4,6 +4,11 @@
 angular.module('myResume')
 .config(function($routeProvider){
         $routeProvider
+            .when('/home', {
+                templateUrl: 'templates/pages/home.html'
+
+            })
+
             .when('/information', {
                 templateUrl: 'templates/pages/information.html',
                 controller: 'InformationController',
@@ -28,5 +33,5 @@ angular.module('myResume')
                 templateUrl: 'templates/pages/addinfo.html'
             })
 
-            .otherwise({ redirectTo: '/'});
+            .otherwise({ redirectTo: '/home'});
     });

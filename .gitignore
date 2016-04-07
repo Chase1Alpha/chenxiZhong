@@ -1,5 +1,5 @@
-css/bootstrap.min.css
-bower_components/
+!css/bootstrap.min.css
+!bower_components/
 .idea/
 index.html
 index2.html
