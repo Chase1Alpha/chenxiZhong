@@ -1,7 +1,7 @@
 css/bootstrap.min.css
 bower_components/
-.idea
+.idea/
 index.html
 index2.html
 js/app.js
-data
+data/
