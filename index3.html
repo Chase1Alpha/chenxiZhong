@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myResume">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular1/angular.min.js"></script>
+    <script src="bower_components/angular1/angular-route.js"></script>
+    <script src="bower_components/marked/lib/marked.js"></script>
+    <script src="bower_components/angular-marked/angular-marked.min.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="js/my-resume.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/controllers/project-controller.js"></script>
+    <script src="js/directives/climate-directive.js"></script>
+
+    <title>Chenxi Zhong's Resume</title>
+</head>
+<body>
+    <div ng-controller="ClimateController">
+        <climate-directive></climate-directive>
+    </div>
+
+    <div class="nav-list">
+        <a href="#/information"> Information </a>
+
+        <a href="#/education"> Education </a>
+
+        <a href="#/projects"> Projects </a>
+
+        <a href="#/experiences"> Experiences </a>
+
+        <a href="#/addinfo"> Additional Information </a>
+
+    </div>
+    <div ng-view></div>
+</body>
+</html>

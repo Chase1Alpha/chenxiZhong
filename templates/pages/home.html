@@ -1,0 +1,41 @@
+<div class="container">
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h2>My Blog</h2>
+
+        <div ng-repeat="blog in homeCtrl.blogs">
+            <blockquote>
+                <h3 class="text-center">Title: {{blog.title}}</h3>
+                <img ng-src="{{blog.image}}" class="img-responsive">
+                <cite class="pull-right">by: {{blog.author}}</cite>
+            </blockquote>
+
+
+                <blockquote ng-repeat="key in blog.reviews">
+                    {{key.body}}
+                    <cite class="pull-right">by: {{key.author}}, {{key.email}}</cite>
+                </blockquote>
+
+            <form name="reviewForm" ng-submit="homeCtrl.addReview(blog.reviews)">
+                <textarea ng-model="homeCtrl.review.body" class="form-control" rows="3"></textarea>
+                     <div class="form-inline">
+                         <div class="form-group">
+                            <label for="exampleInputName2">Name</label>
+                            <input ng-model="homeCtrl.review.author" type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                         </div>
+                         <div class="form-group">
+                             <label for="exampleInputEmail2">Email address</label>
+                             <input ng-model="homeCtrl.review.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="jane.doe@example.com">
+                         </div>
+            <!--<div class="form-group">-->
+                <!--<label for="exampleInputFile">File input</label>-->
+                <!--<input ng-model="comment.image" type="file" id="exampleInputFile">-->
+            <!--</div>-->
+                         <button type="submit" id="submit" class="form-group btn btn-primary pull-right">Post</button>
+                     </div>
+            </form>
+        </div>
+    </div>
+
+</div> <!-- /container -->
