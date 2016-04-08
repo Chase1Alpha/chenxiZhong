@@ -33,7 +33,7 @@
 
   <body>
 
-    <!-- Fixed navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -42,14 +42,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-              <!--<span class="icon-bar"></span>-->
-              <!--<span class="icon-bar"></span>-->
+
           </button>
           <a class="navbar-brand" href="#">Chenxi Zhong</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#/home">Home</a></li>
+            <li><a href="#/home">Home</a></li>
             <li><a href="#/information">Information</a></li>
             <li><a href="#/education">Education</a></li>
             <li><a href="#/projects">Projects</a></li>
@@ -100,7 +99,12 @@
     <script src="js/controllers/home-controller.js"></script>
     <!--<script src="js/directives/climate-directive.js"></script>-->
     <!--<script src="js/directives/time-directive.js"></script>-->
-
+    <script>
+        $(".nav a").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    </script>
 
 
 
