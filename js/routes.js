@@ -5,8 +5,9 @@ angular.module('myResume')
 .config(function($routeProvider){
         $routeProvider
             .when('/home', {
-                templateUrl: 'templates/pages/home.html'
-
+                templateUrl: 'templates/pages/home.html',
+                controller: 'HomeController',
+                controllerAs: 'homeCtrl'
             })
 
             .when('/information', {
