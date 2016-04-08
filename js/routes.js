@@ -12,8 +12,8 @@ angular.module('myResume')
 
             .when('/information', {
                 templateUrl: 'templates/pages/information.html',
-                controller: 'InformationController',
-                controllerAs: 'infoCtrl'
+                //controller: 'InformationController',
+                //controllerAs: 'infoCtrl'
             })
 
             .when('/education', {
@@ -22,8 +22,8 @@ angular.module('myResume')
 
             .when('/projects', {
                 templateUrl: 'templates/pages/projects.html',
-                controller: 'ProjectController',
-                controllerAs: 'projectCtrl'
+                //controller: 'ProjectController',
+                //controllerAs: 'projectCtrl'
             })
 
             .when('/experiences', {

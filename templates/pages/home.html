@@ -17,7 +17,7 @@
                     <cite class="pull-right">by: {{key.author}}, {{key.email}}</cite>
                 </blockquote>
 
-            <form name="reviewForm" ng-submit="homeCtrl.addReview(blog.reviews)">
+            <form name="reviewForm" ng-submit="reviewForm.$valid && homeCtrl.addReview(blog.reviews)" novalidate>
                 <textarea ng-model="homeCtrl.review.body" class="form-control" rows="3"></textarea>
                      <div class="form-inline">
                          <div class="form-group">
@@ -26,7 +26,7 @@
                          </div>
                          <div class="form-group">
                              <label for="exampleInputEmail2">Email address</label>
-                             <input ng-model="homeCtrl.review.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="jane.doe@example.com">
+                             <input ng-model="homeCtrl.review.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="jane.doe@example.com" required>
                          </div>
             <!--<div class="form-group">-->
                 <!--<label for="exampleInputFile">File input</label>-->

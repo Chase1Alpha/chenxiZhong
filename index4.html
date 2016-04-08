@@ -101,7 +101,12 @@
     <!--<script src="js/directives/climate-directive.js"></script>-->
     <!--<script src="js/directives/time-directive.js"></script>-->
 
-
+    <script>
+        $(".nav a").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    </script>
 
 
   </body>
