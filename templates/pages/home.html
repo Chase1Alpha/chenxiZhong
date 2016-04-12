@@ -4,6 +4,15 @@
     <div class="jumbotron">
         <h2>My Blog</h2>
 
+        <div>
+            <blockquote>
+                <h3 class="text-center">Title: Object Tracking</h3>
+                <video class="center-block" controls>
+                    <source src="images/object-tracking.mp4" type="video/mp4">
+                </video>
+            </blockquote>
+        </div>
+
         <div ng-repeat="blog in homeCtrl.blogs">
             <blockquote>
                 <h3 class="text-center">Title: {{blog.title}}</h3>
